@@ -754,6 +754,106 @@ export const MCP_SERVERS: Record<string, MCPServerDefinition> = {
       return true;
     },
   },
+
+  microsoft_outlook: {
+    name: "Microsoft Outlook",
+    description: "Outlook email via Pipedream Supergateway (SSE)",
+    enabled: {
+      local: true,
+      railway: true,
+      docker: true,
+      vercel: true,
+      aws: true,
+    },
+    config: () => ({
+      command: "npx",
+      args: [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/microsoft_outlook",
+      ],
+    }),
+    healthCheck: async () => {
+      console.log("📧 MCP: Microsoft Outlook (Pipedream) ready");
+      return true;
+    },
+  },
+
+  microsoft_outlook_calendar: {
+    name: "Microsoft Outlook Calendar",
+    description: "Outlook Calendar via Pipedream Supergateway (SSE)",
+    enabled: {
+      local: true,
+      railway: true,
+      docker: true,
+      vercel: true,
+      aws: true,
+    },
+    config: () => ({
+      command: "npx",
+      args: [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/microsoft_outlook_calendar",
+      ],
+    }),
+    healthCheck: async () => {
+      console.log("📅 MCP: Microsoft Outlook Calendar (Pipedream) ready");
+      return true;
+    },
+  },
+
+  slack: {
+    name: "Slack",
+    description: "Slack via Pipedream Supergateway (SSE)",
+    enabled: {
+      local: true,
+      railway: true,
+      docker: true,
+      vercel: true,
+      aws: true,
+    },
+    config: () => ({
+      command: "npx",
+      args: [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/slack",
+      ],
+    }),
+    healthCheck: async () => {
+      console.log("💬 MCP: Slack (Pipedream) ready");
+      return true;
+    },
+  },
+
+  airtable_oauth: {
+    name: "Airtable (OAuth)",
+    description: "Airtable via Pipedream Supergateway (SSE)",
+    enabled: {
+      local: true,
+      railway: true,
+      docker: true,
+      vercel: true,
+      aws: true,
+    },
+    config: () => ({
+      command: "npx",
+      args: [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/airtable_oauth",
+      ],
+    }),
+    healthCheck: async () => {
+      console.log("📊 MCP: Airtable (OAuth) (Pipedream) ready");
+      return true;
+    },
+  },
 };
 
 export const mcpEnvironmentConfig = {
@@ -794,6 +894,42 @@ export const mcpEnvironmentConfig = {
         "supergateway",
         "--sse",
         "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/google_calendar",
+      ],
+    },
+    microsoft_outlook: {
+      command: "npx",
+      args: [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/microsoft_outlook",
+      ],
+    },
+    microsoft_outlook_calendar: {
+      command: "npx",
+      args: [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/microsoft_outlook_calendar",
+      ],
+    },
+    slack: {
+      command: "npx",
+      args: [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/slack",
+      ],
+    },
+    airtable_oauth: {
+      command: "npx",
+      args: [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/airtable_oauth",
       ],
     },
     context7: {

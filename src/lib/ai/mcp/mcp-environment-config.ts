@@ -704,6 +704,31 @@ export const MCP_SERVERS: Record<string, MCPServerDefinition> = {
       args: ["-y", "@openbnb/mcp-server-airbnb", "--ignore-robots-txt"],
     }),
   },
+
+  pd: {
+    name: "Pipedream Gmail (PD)",
+    description: "Gmail over Pipedream Supergateway (SSE)",
+    enabled: {
+      local: true,
+      railway: true,
+      docker: true,
+      vercel: true,
+      aws: true,
+    },
+    config: () => ({
+      command: "npx",
+      args: [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/gmail",
+      ],
+    }),
+    healthCheck: async () => {
+      console.log("📧 MCP: Pipedream Gmail (PD) ready");
+      return true;
+    },
+  },
 };
 
 export const mcpEnvironmentConfig = {
@@ -727,6 +752,15 @@ export const mcpEnvironmentConfig = {
     airbnb: {
       command: "npx",
       args: ["-y", "@openbnb/mcp-server-airbnb", "--ignore-robots-txt"],
+    },
+    pd: {
+      command: "npx",
+      args: [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/gmail",
+      ],
     },
     context7: {
       command: "npx",

@@ -7,6 +7,15 @@
     "time": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-time"]
+    },
+    "pd": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/gmail"
+      ]
     }
   }
 }

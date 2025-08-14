@@ -729,6 +729,31 @@ export const MCP_SERVERS: Record<string, MCPServerDefinition> = {
       return true;
     },
   },
+
+  "pd-gcal": {
+    name: "Pipedream Google Calendar (PD)",
+    description: "Google Calendar over Pipedream Supergateway (SSE)",
+    enabled: {
+      local: true,
+      railway: true,
+      docker: true,
+      vercel: true,
+      aws: true,
+    },
+    config: () => ({
+      command: "npx",
+      args: [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/google_calendar",
+      ],
+    }),
+    healthCheck: async () => {
+      console.log("📅 MCP: Pipedream Google Calendar (PD) ready");
+      return true;
+    },
+  },
 };
 
 export const mcpEnvironmentConfig = {
@@ -760,6 +785,15 @@ export const mcpEnvironmentConfig = {
         "supergateway",
         "--sse",
         "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/gmail",
+      ],
+    },
+    "pd-gcal": {
+      command: "npx",
+      args: [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/google_calendar",
       ],
     },
     context7: {

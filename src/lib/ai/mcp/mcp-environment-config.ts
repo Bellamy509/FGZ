@@ -859,137 +859,25 @@ export const MCP_SERVERS: Record<string, MCPServerDefinition> = {
 
 export const mcpEnvironmentConfig = {
   mcpServers: {
-    "simple-thinking": {
-      command: "node",
-      args: ["/application/custom-mcp-server/simple-thinking.js"],
-    },
     "sequential-thinking": {
       command: "node",
       args: ["/application/custom-mcp-server/thinking-server.js"],
     },
     time: {
       command: "npx",
-      args: ["-y", "time-mcp"],
+      args: ["-y", "@modelcontextprotocol/server-time"],
     },
-    "web-search": {
+    pd: {
       command: "npx",
-      args: ["-y", "@pinkpixel/web-scout-mcp"],
+      args: [
+        "-y",
+        "supergateway",
+        "--sse",
+        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/gmail",
+      ],
     },
-    airbnb: {
-      command: "npx",
-      args: ["-y", "@openbnb/mcp-server-airbnb", "--ignore-robots-txt"],
-    },
-    // Serveurs Pipedream supprimés - causaient des problèmes de connexion
-    // gmail, google_calendar, microsoft_outlook, microsoft_outlook_calendar, slack, airtable_oauth
-    context7: {
-      command: "npx",
-      args: ["-y", "@upstash/context7-mcp"],
-    },
-    "mcp-server-chart": {
-      command: "npx",
-      args: ["-y", "@antv/mcp-server-chart"],
-    },
-    // "openai-image-generation": {
-    //   command: "uvx",
-    //   args: ["mcp-openai-image-generation@latest", "stdio"],
-    //   env: {
-    //     OPENAI_API_KEY: "${OPENAI_API_KEY}",
-    //     OPENAI_BASE_URL: "${OPENAI_BASE_URL}",
-    //   },
-    // },
-    // "magicslide-mcp": {
-    //   command: "npx",
-    //   args: [
-    //     "-y",
-    //     "@smithery/cli@latest",
-    //     "run",
-    //     "@IndianAppGuy/magicslide-mcp",
-    //     "--key",
-    //     "fd80bf50-0e48-409c-bdbe-14a8e76e5c52",
-    //   ],
-    // },
-    // 🚫 SERVEURS SMITHERY TEMPORAIREMENT DÉSACTIVÉS (problèmes de connexion)
-    // DeepResearch: {
-    //   command: "npx",
-    //   args: [
-    //     "-y",
-    //     "@smithery/cli@latest",
-    //     "run",
-    //     "@ameeralns/DeepResearchMCP",
-    //     "--key",
-    //     "fd80bf50-0e48-409c-bdbe-14a8e76e5c52",
-    //     "--profile",
-    //     "deaf-finch-Yj4Bgg",
-    //   ],
-    // },
-    // "mcp-veo2": {
-    //   command: "npx",
-    //   args: [
-    //     "-y",
-    //     "@smithery/cli@latest",
-    //     "run",
-    //     "@mario-andreschak/mcp-veo2",
-    //     "--key",
-    //     "fd80bf50-0e48-409c-bdbe-14a8e76e5c52",
-    //     "--profile",
-    //     "deaf-finch-Yj4Bgg",
-    //   ],
-    // },
-    // Serveurs Pipedream désactivés pour Railway
-    // gmail: {
-    //   command: "npx",
-    //   args: [
-    //     "-y",
-    //     "supergateway",
-    //     "--sse",
-    //     "https://mcp.pipedream.net/1601ad5c-81fb-4eee-8cd6-7eaff4b9f6d6/gmail",
-    //   ],
-    // },
-    // gcal: {
-    //   command: "npx",
-    //   args: [
-    //     "-y",
-    //     "supergateway",
-    //     "--sse",
-    //     "https://mcp.pipedream.net/1601ad5c-81fb-4eee-8cd6-7eaff4b9f6d6/google_calendar",
-    //   ],
-    // },
-    // gtasks: {
-    //   command: "npx",
-    //   args: [
-    //     "-y",
-    //     "supergateway",
-    //     "--sse",
-    //     "https://mcp.pipedream.net/1601ad5c-81fb-4eee-8cd6-7eaff4b9f6d6/google_tasks",
-    //   ],
-    // },
-    // hubspot: {
-    //   command: "npx",
-    //   args: [
-    //     "-y",
-    //     "supergateway",
-    //     "--sse",
-    //     "https://mcp.pipedream.net/1601ad5c-81fb-4eee-8cd6-7eaff4b9f6d6/hubspot",
-    //   ],
-    // },
-    // msoutlook: {
-    //   command: "npx",
-    //   args: [
-    //     "-y",
-    //     "supergateway",
-    //     "--sse",
-    //     "https://mcp.pipedream.net/1601ad5c-81fb-4eee-8cd6-7eaff4b9f6d6/microsoft_outlook",
-    //   ],
-    // },
-    // mscal: {
-    //   command: "npx",
-    //   args: [
-    //     "-y",
-    //     "supergateway",
-    //     "--sse",
-    //     "https://mcp.pipedream.net/1601ad5c-81fb-4eee-8cd6-7eaff4b9f6d6/microsoft_outlook_calendar",
-    //   ],
-    // },
+    // TOUS LES AUTRES SERVEURS SUPPRIMÉS POUR ÉVITER LA SURCHARGE
+    // simple-thinking, web-search, airbnb, context7, mcp-server-chart, etc.
   },
 };
 

@@ -859,14 +859,6 @@ export const MCP_SERVERS: Record<string, MCPServerDefinition> = {
 
 export const mcpEnvironmentConfig = {
   mcpServers: {
-    "sequential-thinking": {
-      command: "node",
-      args: ["/application/custom-mcp-server/thinking-server.js"],
-    },
-    time: {
-      command: "npx",
-      args: ["-y", "@modelcontextprotocol/server-time"],
-    },
     pd: {
       command: "npx",
       args: [
@@ -876,8 +868,7 @@ export const mcpEnvironmentConfig = {
         "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/gmail",
       ],
     },
-    // TOUS LES AUTRES SERVEURS SUPPRIMÉS POUR ÉVITER LA SURCHARGE
-    // simple-thinking, web-search, airbnb, context7, mcp-server-chart, etc.
+    // TOUS LES AUTRES SERVEURS SUPPRIMÉS - GMAIL SEULEMENT
   },
 };
 

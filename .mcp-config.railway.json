@@ -1,13 +1,5 @@
 {
   "mcpServers": {
-    "sequential-thinking": {
-      "command": "node",
-      "args": ["/application/custom-mcp-server/thinking-server.js"]
-    },
-    "time": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-time"]
-    },
     "pd": {
       "command": "npx",
       "args": [

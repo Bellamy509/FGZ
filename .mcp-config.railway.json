@@ -7,10 +7,6 @@
     "time": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-time"]
-    },
-    "web-search": {
-      "command": "npx",
-      "args": ["-y", "@pinkpixel/web-scout-mcp"]
     }
   }
 }

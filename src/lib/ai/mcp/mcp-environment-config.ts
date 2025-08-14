@@ -808,13 +808,13 @@ export const MCP_SERVERS: Record<string, MCPServerDefinition> = {
 
   slack: {
     name: "Slack",
-    description: "Slack via Pipedream Supergateway (SSE)",
+    description: "Slack via Pipedream Supergateway (SSE) - SUPPRIMÉ",
     enabled: {
-      local: true,
-      railway: true,
-      docker: true,
-      vercel: true,
-      aws: true,
+      local: false,
+      railway: false,
+      docker: false,
+      vercel: false,
+      aws: false,
     },
     config: () => ({
       command: "npx",
@@ -833,13 +833,13 @@ export const MCP_SERVERS: Record<string, MCPServerDefinition> = {
 
   airtable_oauth: {
     name: "Airtable (OAuth)",
-    description: "Airtable via Pipedream Supergateway (SSE)",
+    description: "Airtable via Pipedream Supergateway (SSE) - SUPPRIMÉ",
     enabled: {
-      local: true,
-      railway: true,
-      docker: true,
-      vercel: true,
-      aws: true,
+      local: false,
+      railway: false,
+      docker: false,
+      vercel: false,
+      aws: false,
     },
     config: () => ({
       command: "npx",

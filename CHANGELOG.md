@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.0.0 (2025-08-14)
+
+
+### Features
+
+* **mcp:** add Gmail via Pipedream supergateway ([3d9d0fe](https://github.com/Bellamy509/FGZ/commit/3d9d0fe1b5d195c49849f871db1bd36600512b6f))
+* **mcp:** add PD Google Calendar server (pd-gcal) and runtime mapping ([b68c364](https://github.com/Bellamy509/FGZ/commit/b68c364f23e0f1015181250341013b6e21813211))
+* **mcp:** add PD Pipedream Gmail server to MCP config and runtime map ([f35e761](https://github.com/Bellamy509/FGZ/commit/f35e761fb7d59920b5ab00c5a85e6e4356b1c451))
+* **mcp:** add Pipedream servers: microsoft_outlook, microsoft_outlook_calendar, slack, airtable_oauth (defs + runtime) ([93fa6c9](https://github.com/Bellamy509/FGZ/commit/93fa6c9ea50901ef9b0f5b15372e56fc4345e945))
+* **mcp:** completely remove Slack and Airtable servers ([15121e0](https://github.com/Bellamy509/FGZ/commit/15121e0383dec0a7d3dc0ce473951ece097e1443))
+* **mcp:** drastic cleanup - only 3 essential servers ([01c22e6](https://github.com/Bellamy509/FGZ/commit/01c22e6e9bf7dcbe5a20b9a6f824ea9eaedbcd49))
+* **mcp:** GMAIL ONLY - ultimate simplification ([4437000](https://github.com/Bellamy509/FGZ/commit/443700085f8d6319e8ca6b71ccac2b84c3d8be10))
+* **mcp:** remove all Pipedream servers to fix connection issues ([0111952](https://github.com/Bellamy509/FGZ/commit/0111952997fa34be0df9c88ffc83d51286e19a37))
+
 ## [1.15.0](https://github.com/cgoinglove/better-chatbot/compare/v1.14.1...v1.15.0) (2025-07-11)
 
 

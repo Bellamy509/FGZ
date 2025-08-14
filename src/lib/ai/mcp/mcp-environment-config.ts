@@ -705,8 +705,8 @@ export const MCP_SERVERS: Record<string, MCPServerDefinition> = {
     }),
   },
 
-  pd: {
-    name: "Pipedream Gmail (PD)",
+  gmail: {
+    name: "Gmail",
     description: "Gmail over Pipedream Supergateway (SSE)",
     enabled: {
       local: true,
@@ -725,13 +725,13 @@ export const MCP_SERVERS: Record<string, MCPServerDefinition> = {
       ],
     }),
     healthCheck: async () => {
-      console.log("📧 MCP: Pipedream Gmail (PD) ready");
+      console.log("📧 MCP: Gmail (Pipedream) ready");
       return true;
     },
   },
 
-  "pd-gcal": {
-    name: "Pipedream Google Calendar (PD)",
+  google_calendar: {
+    name: "Google Calendar",
     description: "Google Calendar over Pipedream Supergateway (SSE)",
     enabled: {
       local: true,
@@ -750,7 +750,7 @@ export const MCP_SERVERS: Record<string, MCPServerDefinition> = {
       ],
     }),
     healthCheck: async () => {
-      console.log("📅 MCP: Pipedream Google Calendar (PD) ready");
+      console.log("📅 MCP: Google Calendar (Pipedream) ready");
       return true;
     },
   },
@@ -778,7 +778,7 @@ export const mcpEnvironmentConfig = {
       command: "npx",
       args: ["-y", "@openbnb/mcp-server-airbnb", "--ignore-robots-txt"],
     },
-    pd: {
+    gmail: {
       command: "npx",
       args: [
         "-y",
@@ -787,7 +787,7 @@ export const mcpEnvironmentConfig = {
         "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/gmail",
       ],
     },
-    "pd-gcal": {
+    google_calendar: {
       command: "npx",
       args: [
         "-y",

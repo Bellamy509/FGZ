@@ -707,13 +707,13 @@ export const MCP_SERVERS: Record<string, MCPServerDefinition> = {
 
   gmail: {
     name: "Gmail",
-    description: "Gmail over Pipedream Supergateway (SSE)",
+    description: "Gmail over Pipedream Supergateway (SSE) - DÉSACTIVÉ",
     enabled: {
-      local: true,
-      railway: true,
-      docker: true,
-      vercel: true,
-      aws: true,
+      local: false,
+      railway: false,
+      docker: false,
+      vercel: false,
+      aws: false,
     },
     config: () => ({
       command: "npx",
@@ -732,13 +732,14 @@ export const MCP_SERVERS: Record<string, MCPServerDefinition> = {
 
   google_calendar: {
     name: "Google Calendar",
-    description: "Google Calendar over Pipedream Supergateway (SSE)",
+    description:
+      "Google Calendar over Pipedream Supergateway (SSE) - DÉSACTIVÉ",
     enabled: {
-      local: true,
-      railway: true,
-      docker: true,
-      vercel: true,
-      aws: true,
+      local: false,
+      railway: false,
+      docker: false,
+      vercel: false,
+      aws: false,
     },
     config: () => ({
       command: "npx",
@@ -878,60 +879,8 @@ export const mcpEnvironmentConfig = {
       command: "npx",
       args: ["-y", "@openbnb/mcp-server-airbnb", "--ignore-robots-txt"],
     },
-    gmail: {
-      command: "npx",
-      args: [
-        "-y",
-        "supergateway",
-        "--sse",
-        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/gmail",
-      ],
-    },
-    google_calendar: {
-      command: "npx",
-      args: [
-        "-y",
-        "supergateway",
-        "--sse",
-        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/google_calendar",
-      ],
-    },
-    microsoft_outlook: {
-      command: "npx",
-      args: [
-        "-y",
-        "supergateway",
-        "--sse",
-        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/microsoft_outlook",
-      ],
-    },
-    microsoft_outlook_calendar: {
-      command: "npx",
-      args: [
-        "-y",
-        "supergateway",
-        "--sse",
-        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/microsoft_outlook_calendar",
-      ],
-    },
-    slack: {
-      command: "npx",
-      args: [
-        "-y",
-        "supergateway",
-        "--sse",
-        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/slack",
-      ],
-    },
-    airtable_oauth: {
-      command: "npx",
-      args: [
-        "-y",
-        "supergateway",
-        "--sse",
-        "https://mcp.pipedream.net/d9e753e1-853e-4b7c-9c4e-152a4cfaecc7/airtable_oauth",
-      ],
-    },
+    // Serveurs Pipedream supprimés - causaient des problèmes de connexion
+    // gmail, google_calendar, microsoft_outlook, microsoft_outlook_calendar, slack, airtable_oauth
     context7: {
       command: "npx",
       args: ["-y", "@upstash/context7-mcp"],

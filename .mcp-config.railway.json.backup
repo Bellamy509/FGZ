@@ -1,5 +1,9 @@
 {
   "mcpServers": {
+    "simple-thinking": {
+      "command": "node",
+      "args": ["/application/custom-mcp-server/simple-thinking.js"]
+    },
     "sequential-thinking": {
       "command": "node",
       "args": ["/application/custom-mcp-server/thinking-server.js"]
@@ -11,6 +15,15 @@
     "web-search": {
       "command": "npx",
       "args": ["-y", "@pinkpixel/web-scout-mcp"]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/tmp",
+        "--allow-write"
+      ]
     }
   }
 }
